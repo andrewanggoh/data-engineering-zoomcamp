@@ -27,8 +27,6 @@ Then, I checked the `pip` version.
 pip --version
 ```
 
-![alt text](assets/image.png)
-
 >Answer: 25.3
 
 ## Question 2. Understanding Docker networking and docker-compose
