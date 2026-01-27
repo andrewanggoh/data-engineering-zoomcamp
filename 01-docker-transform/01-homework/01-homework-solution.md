@@ -27,6 +27,8 @@ Then, I checked the `pip` version.
 pip --version
 ```
 
+![alt text](assets/image.png)
+
 >Answer: 25.3
 
 ## Question 2. Understanding Docker networking and docker-compose
@@ -153,6 +155,11 @@ Note: it's `tip` , not `trip`. We need the name of the zone, not the ID.
 - East Harlem North
 - LaGuardia Airport
 
+### Solution 6
+
+The steps and code of solving this question is in `01-homework-solution-no-3-6.ipynb`
+
+>Answer: Yorkville West
 
 ## Terraform
 
@@ -178,3 +185,12 @@ Answers:
 - terraform init, terraform run -auto-approve, terraform destroy
 - terraform init, terraform apply -auto-approve, terraform destroy
 - terraform import, terraform apply -y, terraform rm
+
+### Solution 7
+
+Terraform lifecycle:
+- Initialize (`init`) the working directory and providers
+- Generate & execute (`apply`) infrastructure changes, `-auto-approve` skips confirmation and executes immediately
+- Cleanup (`destroy`) managed infrastructure
+
+>Answer: **terraform init, terraform apply -auto-approve, terraform destroy**
