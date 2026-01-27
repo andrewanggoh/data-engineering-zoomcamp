@@ -188,9 +188,9 @@ Answers:
 
 ### Solution 7
 
-Terraform lifecycle:
-- Initialize (`init`) the working directory and providers
-- Generate & execute (`apply`) infrastructure changes, `-auto-approve` skips confirmation and executes immediately
-- Cleanup (`destroy`) managed infrastructure
+Terraform lifecycle based on the sequences:
+- `init` to initialize the working directory and providers
+- `apply -auto-approve` to generate infrastructure changes and executes immediately
+- `destroy` to remove managed infrastructure
 
 >Answer: **terraform init, terraform apply -auto-approve, terraform destroy**
