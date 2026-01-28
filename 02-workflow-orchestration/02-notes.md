@@ -7,6 +7,10 @@ Kestra adalah sebuah platform *open-source* dan *event-driven orchestration* yan
 ## Outline
 
 - [2.1 Introduction to Workflow Orchestration](#21-introduction-to-workflow-orchestration)
+- [## 2.2 Getting Started with Kestra](22-getting-started-with-kestra)
+- [2.3 Hands-On Coding Project: Build ETL Data Pipelines with Kestra](#23-hands-on-coding-project-build-etl-data-pipelines-with-kestra)
+- [2.4 ELT Pipelines in Kestra: Google Cloud Platform](#24-elt-pipelines-in-Kestra-Google-Cloud-Platform)
+- [2.5 Using AI for Data Engineering in Kestra](#25-Using-AI-for-Data-Engineering-in-Kestra)
 
 ## 2.1 Introduction to Workflow Orchestration
 
@@ -14,3 +18,10 @@ Pada bagian ini, kita akan mempelajari dasar dari *workflow orchestration*, kegu
 
 ### 2.1.1 - What is Workflow Orchestration?
 
+## 2.2 Getting Started with Kestra
+
+## 2.3 Hands-On Coding Project: Build ETL Data Pipelines with Kestra
+
+## 2.4 ELT Pipelines in Kestra: Google Cloud Platform
+
+## 2.5 Using AI for Data Engineering in Kestra
