@@ -1,0 +1,9 @@
+# Workflow Orchestration
+
+Modul ke-2 dari Data Engineering Zoomcamp mempelajari workflow orchestration menggunakan Kestra.
+
+Kestra adalah sebuah platform open-source dan event-driven orchestration yang menyederhanakan pembuatan scheduled and event-driven workflow. Kestra memungkinkan kita untuk membangun sebuah reliable workflow dengan hanya beberapa baris YAML dengan mengadopsi infrastruktur sebagai code practices untuk data and process orchestration.
+
+## Outline
+
+- 2.1
