@@ -10,7 +10,7 @@ Kestra adalah sebuah platform *open-source* dan *event-driven orchestration* yan
 
 ## 2.1 Introduction to Workflow Orchestration
 
-Pada bagian ini, kitak akan mempelajari dasar dari *workflow orchestration*, kegunaan pentingnya, dan bagaimana Kestra cocok dalam arsitektur orchestration.
+Pada bagian ini, kita akan mempelajari dasar dari *workflow orchestration*, kegunaannya, dan bagaimana Kestra cocok dalam arsitektur orchestration.
 
 ### 2.1.1 - What is Workflow Orchestration?
 
