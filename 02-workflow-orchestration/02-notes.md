@@ -18,6 +18,12 @@ Pada bagian ini, kita akan mempelajari dasar dari *workflow orchestration*, kegu
 
 ### 2.1.1 - What is Workflow Orchestration?
 
+Workflow orchestration adalah sebuah sistem yang memanfaatkan berbagai tools (code, cloud, platform, dll.) untuk menjalankan sebuah *workflow*. Sebagaimana orkestrasi musik yang memiliki *conductor*, *workflow orchestration* memiliki *orchestrator* yang berperan untuk mengarut alur kerja tiap tools. Pada camp ini, kita akan menggunakan Kestra sebagai *orchestrator*.
+
+### 2.2.2 - What is Kestra?
+
+
+
 ## 2.2 Getting Started with Kestra
 
 ## 2.3 Hands-On Coding Project: Build ETL Data Pipelines with Kestra
