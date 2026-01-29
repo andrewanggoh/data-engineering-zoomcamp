@@ -1,6 +1,6 @@
 # Docker and Terraform
 
-Ini dalah catatan saya untuk Modul ke-1 dari Data Engineering Zoomcamp yang mempelajari Docker, SQL, dan Terraform
+Ini dalah catatan saya untuk Modul ke-1 dari Data Engineering Zoomcamp yang mempelajari Docker, SQL, Terraform, dan Google Cloud Platform (GCP).
 
 ## Outline
 
