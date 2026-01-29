@@ -19,3 +19,18 @@ Ini dalah catatan saya untuk Modul ke-1 dari Data Engineering Zoomcamp yang memp
 - [1.13 GCP Overview](#113-GCP-Overview)
 
 ## 1.1 Introduction to Docker
+
+**Docker** adalah sebuah *containerization software* yang berguna untuk mengisolasi *software* mirip dengan *virtual machines* namun dengan cara yang lebih *lean*.
+
+**Docker Image** adalah sebuah *snapshot* dari *container*
+
+| Command                  | Description                                                               |
+| ------------------------ | ------------------------------------------------------------------------- |
+| `docker --version`       | Check Docker version                                                      |
+| `docker run hello-world` | Run a simple container                                                    |
+| `docker run <image>`     | Download (if there's not) and run container                               |
+| `docker run -it`         | Run container interactively (get into container terminal)                 |
+| `docker ps -a`           | List of all container (running or not)                                    |
+| `docker rm <id>`         | Delete stopped container                                                  |
+| `--rm`                   | Flag to automatically delete container after use                          |
+
