@@ -1,6 +1,6 @@
 # Workflow Orchestration
 
-Modul ke-2 dari Data Engineering Zoomcamp mempelajari workflow orchestration menggunakan Kestra sebagai *orchestrator*.
+Ini dalah catatan saya untuk Modul ke-2 dari Data Engineering Zoomcamp yang mempelajari workflow orchestration menggunakan Kestra sebagai *orchestrator*.
 
 ## Outline
 
