@@ -53,3 +53,5 @@ Docker digunakan dalam berbagai situasi:
 
 ### 1.1.3 Stateless Containers
 
+> [!NOTE]
+> Docker container itu *stateless* - perubahan apapun yang terjadi di dalam container TIDAK AKAN tersimpan jika container *killed* dan dijalankan kembali.
