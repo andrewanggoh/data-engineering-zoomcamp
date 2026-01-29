@@ -33,6 +33,8 @@ Bagian ini berisi tentang cara install Kestra, konsep penting dalam pembuatan *w
 
 ### 2.2.1 Installing Kestra
 
+Pada bagian ini kita akan menggunakan Postgre Database dan PGAdmin.
+
 
 
 ## 2.3 Hands-On Coding Project: Build ETL Data Pipelines with Kestra
