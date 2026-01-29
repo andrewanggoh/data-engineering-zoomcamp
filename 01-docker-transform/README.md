@@ -22,7 +22,24 @@ Ini dalah catatan saya untuk Modul ke-1 dari Data Engineering Zoomcamp yang memp
 
 **Docker** adalah sebuah *containerization software* yang berguna untuk mengisolasi *software* mirip dengan *virtual machines* namun dengan cara yang lebih *lean*.
 
-**Docker Image** adalah sebuah *snapshot* dari *container*
+**Docker Image** adalah sebuah *snapshot* dari *container* yang bisa kita definisikan untuk bisa *run* di software kita, atau dalam hal ini *data pipeline*. Dengan *export* Docker images ke Cloud *providers* (AWS atau GCP), kita bisa *run* containers kita di sana.
+
+### 1.1.1 Why Docker?
+
+Docker menyediakan beberapa keunggulan:
+
+- **Reproducibility**: Same environment everywhere
+- **Isolation**: Applications run independently
+- **Portability**: Run anywhere Docker is intalled
+
+Docker digunakan dalam berbagai situasi:
+
+- Integration tests: CI/CD pipelines
+- Running pipelines on the cloud: AWS Batch, Kubernetes jobs
+- Spark: Analytics engine for large-scale data processing
+- Serverless: AWS Lambda, Google Functions
+
+### 1.1.2 Basic Docker Commands
 
 | Command                  | Description                                                               |
 | ------------------------ | ------------------------------------------------------------------------- |
@@ -33,4 +50,6 @@ Ini dalah catatan saya untuk Modul ke-1 dari Data Engineering Zoomcamp yang memp
 | `docker ps -a`           | List of all container (running or not)                                    |
 | `docker rm <id>`         | Delete stopped container                                                  |
 | `--rm`                   | Flag to automatically delete container after use                          |
+
+### 1.1.3 Stateless Containers
 
