@@ -1,2 +1,3 @@
-# data-engineering-zoomcamp
-Personal Workshop Codespaces for Data Engineer Zoomcamp 2026
+# Data Engineering Zoomcamp 2026 Journal
+
+A personal learning journey documenting weekly progress, notes, and projects from Data Engineering Zoomcamp 2026.
