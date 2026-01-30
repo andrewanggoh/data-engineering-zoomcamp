@@ -18,13 +18,13 @@ Ini dalah catatan saya untuk Modul ke-1 dari Data Engineering Zoomcamp yang memp
 - [1.12 Terraform Overview](#112-Terraform-Overview)
 - [1.13 GCP Overview](#113-GCP-Overview)
 
-## 1.1 Introduction to Docker
+# 1.1 Introduction to Docker
 
 **Docker** adalah sebuah *containerization software* yang berguna untuk mengisolasi *software* mirip dengan *virtual machines* namun dengan cara yang lebih *lean*.
 
 **Docker Image** adalah sebuah *snapshot* dari *container* yang bisa kita definisikan untuk bisa *run* di software kita, atau dalam hal ini *data pipeline*. Dengan *export* Docker images ke Cloud *providers* (AWS atau GCP), kita bisa *run* containers kita di sana. Apapun yang kita lakukan di Docker itu terisolasi dari host machine.
 
-### 1.1.1 Why Docker?
+## 1.1.1 Why Docker?
 
 Docker menyediakan beberapa keunggulan:
 
@@ -44,7 +44,7 @@ Docker digunakan dalam berbagai situasi:
 > 
 > - Serverless means model cloud computing untuk buat aplikasi tanpa perlu mengelola, menyediakan, atau memelihara server fisik/virtual.
 
-### 1.1.2 Basic Docker Commands
+## 1.1.2 Basic Docker Commands
 
 | Command                  | Description                                                               |
 | ------------------------ | ------------------------------------------------------------------------- |
@@ -59,7 +59,7 @@ Docker digunakan dalam berbagai situasi:
 | `docker rm <id>`         | Delete stopped container                                                  |
 | `--rm`                   | Flag to automatically delete container after use                          |
 
-### 1.1.3 Stateless Containers
+## 1.1.3 Stateless Containers
 
 > [!NOTE]
 > Docker container itu *stateless* (doesn't preserve state) - perubahan apapun yang terjadi di dalam container **TIDAK AKAN** tersimpan jika kita keluar container dan dijalankan kembali.
@@ -75,7 +75,7 @@ python -V
 
 Hasilnya akan terlihat bahwa tidak ada python yang ter-install meskipun di host machine ter-install python. Ini bukti kalau docker machine tidak sama dengan host machine. 
 
-### 1.1.4 Different Base Images
+## 1.1.4 Different Base Images
 
 Pada bagian ini, kita akan menggunakan docker image dengan `python:3.13.11-slim` sebagai base images rather than Docker Image `ubuntu`. Append `-slim` digunakan untuk menggunakan versi yang lebih ringan. Ketika `run` docker image tersebut kita akan masuk ke Python session.
 
@@ -96,7 +96,7 @@ cat file
 
 Ketika kita exit (`Ctrl+D`) dan masuk lagi, file tersebut hilang.
 
-### 1.1.4 Managing Containers
+## 1.1.5 Managing Containers
 
 Namun, sebenarnya **hal itu tidak sepenuhnya benar**. Kondisi atau *state* tersebut tersimpan somewhere. Kita bisa liat stopped containers:
 
@@ -123,6 +123,6 @@ docker run -it --rm python:3.13.11
 # add -slim to get a smaller version
 ```
 
-### 1.1.5 Volumes
+## 1.1.6 Volumes
 
 J
