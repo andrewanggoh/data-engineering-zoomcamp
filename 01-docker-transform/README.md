@@ -62,7 +62,7 @@ Docker digunakan dalam berbagai situasi:
 ### 1.1.3 Stateless Containers
 
 > [!NOTE]
-> Docker container itu *stateless* (doesn't preserve state) - perubahan apapun yang terjadi di dalam container TIDAK AKAN tersimpan jika kita keluar container dan dijalankan kembali.
+> Docker container itu *stateless* (doesn't preserve state) - perubahan apapun yang terjadi di dalam container **TIDAK AKAN** tersimpan jika kita keluar container dan dijalankan kembali.
 
 Docker image dapat dibuat dengan menggunakan code sebagai berikut:
 
@@ -75,10 +75,54 @@ python -V
 
 Hasilnya akan terlihat bahwa tidak ada python yang ter-install meskipun di host machine ter-install python. Ini bukti kalau docker machine tidak sama dengan host machine. 
 
-Pada bagian ini, kita akan menggunakan docker image dengan `python:3.13.11-slim` rather than Docker Image `ubuntu`. Append `-slim` digunakan untuk menggunakan versi yang lebih ringan. Ketika `run` docker image tersebut kita akan masuk ke Python session.
+### 1.1.4 Different Base Images
+
+Pada bagian ini, kita akan menggunakan docker image dengan `python:3.13.11-slim` sebagai base images rather than Docker Image `ubuntu`. Append `-slim` digunakan untuk menggunakan versi yang lebih ringan. Ketika `run` docker image tersebut kita akan masuk ke Python session.
 
 Agar dapat masuk ke `bash` session dimana kita bisa berinteraksi dengan OS Linux/Unix, kita dapat menambahkan `--entrypoint` seperti berikut:
 
 ```
 docker run -it --entrypoint=bash python:3.13.11-slim
 ```
+
+Kemudian, kita juga bisa buat sebuah file (tapi ini *antipattern*) untuk membuktikan kondisi *stateless*:
+```
+# create file yang isinya '123'
+echo 123 > file 
+
+# liat isi file bernama `file`
+cat file
+```
+
+Ketika kita exit (`Ctrl+D`) dan masuk lagi, file tersebut hilang.
+
+### 1.1.4 Managing Containers
+
+Namun, sebenarnya **hal itu tidak sepenuhnya benar**. Kondisi atau *state* tersebut tersimpan somewhere. Kita bisa liat stopped containers:
+
+```
+docker ps -a
+```
+
+Melihat id tiap containers yang ada
+
+```
+docker ps -aq
+```
+
+Menghapus seluruh docker containers yang ada
+
+```
+docker rm `docker ps -aq`
+```
+
+Jadi, **best practice** dalam menjalankan docker adalah dengan menambahkan `--rm` agar container tidak tersimpan dan take memory space
+
+```
+docker run -it --rm python:3.13.11
+# add -slim to get a smaller version
+```
+
+### 1.1.5 Volumes
+
+J
