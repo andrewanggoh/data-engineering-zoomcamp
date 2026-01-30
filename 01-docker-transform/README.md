@@ -22,7 +22,7 @@ Ini dalah catatan saya untuk Modul ke-1 dari Data Engineering Zoomcamp yang memp
 
 **Docker** adalah sebuah *containerization software* yang berguna untuk mengisolasi *software* mirip dengan *virtual machines* namun dengan cara yang lebih *lean*.
 
-**Docker Image** adalah sebuah *snapshot* dari *container* yang bisa kita definisikan untuk bisa *run* di software kita, atau dalam hal ini *data pipeline*. Dengan *export* Docker images ke Cloud *providers* (AWS atau GCP), kita bisa *run* containers kita di sana.
+**Docker Image** adalah sebuah *snapshot* dari *container* yang bisa kita definisikan untuk bisa *run* di software kita, atau dalam hal ini *data pipeline*. Dengan *export* Docker images ke Cloud *providers* (AWS atau GCP), kita bisa *run* containers kita di sana. Apapun yang kita lakukan di Docker itu terisolasi dari host machine.
 
 ### 1.1.1 Why Docker?
 
@@ -40,7 +40,7 @@ Docker digunakan dalam berbagai situasi:
 - Serverless: AWS Lambda, Google Functions
 
 > [!NOTE]
-> - CI means Contionuous Integration dan CD means Continuous Delivery/Deployment untuk make sure kode konsisten dan minim bug.
+> - **CI** means *Contionuous Integration* dan **CD** means *Continuous Delivery/Deployment* untuk make sure kode konsisten dan minim bug.
 > 
 > - Serverless means model cloud computing untuk buat aplikasi tanpa perlu mengelola, menyediakan, atau memelihara server fisik/virtual.
 
@@ -48,10 +48,13 @@ Docker digunakan dalam berbagai situasi:
 
 | Command                  | Description                                                               |
 | ------------------------ | ------------------------------------------------------------------------- |
+| `docker`                 | Check Docker installed or not                                             |
 | `docker --version`       | Check Docker version                                                      |
+| `apt update`             | Update libraries on repo                                                  |
+| `apt install <library>`  | Install library. Example: `apt install python3`                           |
 | `docker run hello-world` | Run a simple container                                                    |
-| `docker run <image>`     | Download (if there's not) and run container                               |
-| `docker run -it`         | Run container interactively (get into container terminal)                 |
+| `docker run <image>`     | Download (if there's not) and run container and back to our computer      |
+| `docker run -it`         | Run container interactively (get into/inside the container terminal)      |
 | `docker ps -a`           | List of all container (running or not)                                    |
 | `docker rm <id>`         | Delete stopped container                                                  |
 | `--rm`                   | Flag to automatically delete container after use                          |
@@ -59,4 +62,23 @@ Docker digunakan dalam berbagai situasi:
 ### 1.1.3 Stateless Containers
 
 > [!NOTE]
-> Docker container itu *stateless* - perubahan apapun yang terjadi di dalam container TIDAK AKAN tersimpan jika container *killed* dan dijalankan kembali.
+> Docker container itu *stateless* (doesn't preserve state) - perubahan apapun yang terjadi di dalam container TIDAK AKAN tersimpan jika kita keluar container dan dijalankan kembali.
+
+Docker image dapat dibuat dengan menggunakan code sebagai berikut:
+
+```
+docker run -it ubuntu
+
+# Check python
+python -V
+```
+
+Hasilnya akan terlihat bahwa tidak ada python yang ter-install meskipun di host machine ter-install python. Ini bukti kalau docker machine tidak sama dengan host machine. 
+
+Pada bagian ini, kita akan menggunakan docker image dengan `python:3.13.11-slim` rather than Docker Image `ubuntu`. Append `-slim` digunakan untuk menggunakan versi yang lebih ringan. Ketika `run` docker image tersebut kita akan masuk ke Python session.
+
+Agar dapat masuk ke `bash` session dimana kita bisa berinteraksi dengan OS Linux/Unix, kita dapat menambahkan `--entrypoint` seperti berikut:
+
+```
+docker run -it --entrypoint=bash python:3.13.11-slim
+```
