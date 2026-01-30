@@ -39,6 +39,11 @@ Docker digunakan dalam berbagai situasi:
 - Spark: Analytics engine for large-scale data processing
 - Serverless: AWS Lambda, Google Functions
 
+> [!NOTE]
+> - CI means Contionuous Integration dan CD means Continuous Delivery/Deployment untuk make sure kode konsisten dan minim bug.
+> 
+> - Serverless means model cloud computing untuk buat aplikasi tanpa perlu mengelola, menyediakan, atau memelihara server fisik/virtual.
+
 ### 1.1.2 Basic Docker Commands
 
 | Command                  | Description                                                               |
