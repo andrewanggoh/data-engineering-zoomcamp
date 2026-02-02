@@ -33,7 +33,17 @@ Bagian ini berisi tentang cara install Kestra, konsep penting dalam pembuatan *w
 
 ### 2.2.1 Installing Kestra
 
-Pada bagian ini kita akan menggunakan Postgre Database dan PGAdmin.
+Pada bagian ini kita akan menggunakan Postgre Database dan PGAdmin dalam set up docker compose. Selain itu, kita juga akan menggunakan PG Database tambahan untuk Kestra dapat menyimpan data dan workflow dan metadata Kestra. Kita juga akan menambahkan 2 *volumes* baru, yaitu
+
+1. kestra_postgres_data
+2. kestra_data
+
+Kita juga akan menggunakan container kestra pada docker compose. Full code script-nya: `docker-compose.yaml` di repo ini. Kemudian, *run* docker-nya:
+```
+docker compose up
+```
+
+### 2.2.2 Learn the Kestra Concepts
 
 
 
