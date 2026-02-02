@@ -33,6 +33,8 @@ To see the uncompressed file size, I add additional command and the task script 
 Resulting:
 ![alt text](assets/solution-1.jpeg)
 
+Full script of flow for solution one is in [02-homework-no-1.yaml](https://github.com/andrewanggoh/data-engineering-zoomcamp/blob/main/02-workflow-orchestration/02-homework/02-homework-no-1.yaml)
+
 > Answer: 128.3 MiB
 
 ## Question 2
@@ -64,7 +66,7 @@ Rendered value of the variables will be subtitute with the inputs. Therefore ren
 
 ### Solution 3
 
-To solve this question, I use the script of flow to extract, merge all the dataset, and store it on Postgre database. Full script of the flow for this solution is available on [02-homework-no-3-4.yaml](dsad). With that script, I use backfill to get the data from 2020 of yellow taxi. Then, I take the data using this query in PGAdmin:
+To solve this question, I use the script of flow to extract, merge all the dataset, and store it on Postgre database. Full script of the flow for this solution is available on [02-homework-no-3-4.yaml](https://github.com/andrewanggoh/data-engineering-zoomcamp/blob/main/02-workflow-orchestration/02-homework/02-homework-no-3-4.yaml). With that script, I use backfill to get the data from 2020 of yellow taxi. Then, I take the data using this query in PGAdmin:
 
 ```
 SELECT COUNT(*) AS total_rows
@@ -83,7 +85,7 @@ FROM public.yellow_tripdata;
 
 ### Solution 4
 
-To solve this question, I use the same script of flow as Solution 3 to extract, merge all the dataset, and store it on Postgre database. Full script of the flow for this solution is available on [02-homework-no-3-4.yaml](dsad). With that script, I use backfill to get the data from 2020 of green taxi. Then, I take the data using this query in PGAdmin:
+To solve this question, I use the same script of flow as Solution 3 to extract, merge all the dataset, and store it on Postgre database. Full script of the flow for this solution is available on [02-homework-no-3-4.yaml](https://github.com/andrewanggoh/data-engineering-zoomcamp/blob/main/02-workflow-orchestration/02-homework/02-homework-no-3-4.yaml). With that script, I use backfill to get the data from 2020 of green taxi. Then, I take the data using this query in PGAdmin:
 
 ```
 SELECT COUNT(*) AS total_rows
@@ -102,7 +104,7 @@ FROM public.green_tripdata;
 
 ### Solution 5
 
-To solve this question, I made different Kestra flow that specified to extract data per month per year and query to calculate number of the data. Full script of the flow for this solution is available on [02-homework-no-5.yaml](dsad)
+To solve this question, I made different Kestra flow that specified to extract data per month per year and query to calculate number of the data. Full script of the flow for this solution is available on [02-homework-no-5.yaml](https://github.com/andrewanggoh/data-engineering-zoomcamp/blob/main/02-workflow-orchestration/02-homework/02-homework-no-5.yaml)
 
 > Answer: 1,925,152
 
