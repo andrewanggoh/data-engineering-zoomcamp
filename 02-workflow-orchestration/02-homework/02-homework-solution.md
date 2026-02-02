@@ -6,6 +6,8 @@ This repository contain the code for solving the homework of Data Engineering Zo
 
 Complete the quiz shown below. It's a set of 6 multiple-choice questions to test your understanding of workflow orchestration, Kestra, and ETL pipelines.
 
+## Question 1
+
 1) Within the execution for `Yellow` Taxi data for the year `2020` and month `12`: what is the uncompressed file size (i.e. the output file `yellow_tripdata_2020-12.csv` of the `extract` task)?
 - 128.3 MiB
 - 134.5 MiB
@@ -33,6 +35,8 @@ Resulting:
 
 > Answer: 128.3 MiB
 
+## Question 2
+
 2) What is the rendered value of the variable `file` when the inputs `taxi` is set to `green`, `year` is set to `2020`, and `month` is set to `04` during execution?
 - `{{inputs.taxi}}_tripdata_{{inputs.year}}-{{inputs.month}}.csv` 
 - `green_tripdata_2020-04.csv`
@@ -49,6 +53,8 @@ file = "{{inputs.taxi}}_tripdata_{{inputs.year}}-{{inputs.month}}.csv"
 Rendered value of the variables will be subtitute with the inputs. Therefore rendered value during execution will be `green_tripdata_2020-04.csv`
 
 > Answer: `green_tripdata_2020-04.csv`
+
+## Question 3
 
 3) How many rows are there for the `Yellow` Taxi data for all CSV files in the year 2020?
 - 13,537.299
@@ -67,6 +73,8 @@ FROM public.yellow_tripdata;
 
 > Answer: 24,648,499
 
+## Question 4
+
 4) How many rows are there for the `Green` Taxi data for all CSV files in the year 2020?
 - 5,327,301
 - 936,199
@@ -84,6 +92,8 @@ FROM public.green_tripdata;
 
 > Answer: 1,734,051
 
+## Question 5
+
 5) How many rows are there for the `Yellow` Taxi data for the March 2021 CSV file?
 - 1,428,092
 - 706,911
@@ -95,6 +105,8 @@ FROM public.green_tripdata;
 To solve this question, I made different Kestra flow that specified to extract data per month per year and query to calculate number of the data. Full script of the flow for this solution is available on [02-homework-no-5.yaml](dsad)
 
 > Answer: 1,925,152
+
+## Question 6
 
 6) How would you configure the timezone to New York in a Schedule trigger?
 - Add a `timezone` property set to `EST` in the `Schedule` trigger configuration  
